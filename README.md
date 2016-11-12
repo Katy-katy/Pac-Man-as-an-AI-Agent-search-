@@ -8,11 +8,11 @@ python pacman.py -l bigMaze -z .5 -p GoWestAgent
 
 In this implementation the Pac-Man always goes West.
 
-I implemented the depth-first search (DFS) algorithm in the depthFirstSearch function in search.py. Using a Stack to keep the possible actions I wrote the graph search version of DFS, which avoids expanding any already visited states. 
+I implemented the **depth-first search (DFS)** algorithm in the depthFirstSearch function in search.py. Using a Stack to keep the possible actions I wrote the graph search version of DFS, which avoids expanding any already visited states. 
 
 python pacman.py -l mediumMaze -z .5 -p SearchAgent -z .5
 
-![Mockup for feature A](https://github.com/Katy-katy/PYTHON-Pac-Man-as-an-AI-Agent/blob/master/Screen_shot.png)
+![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/dfs.png)
 
 The Pac-Man board will show an overlay of the states explored, and the order in which they were explored (brighter red means earlier exploration). 
 Path found with total cost of 130 actions
