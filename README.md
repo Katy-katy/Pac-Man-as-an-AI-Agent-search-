@@ -18,8 +18,10 @@ The Pac-Man board will show an overlay of the states explored, and the order in 
 Path found with total cost of 130 actions
 Search nodes expanded: 146
 
-2.Then I  implemented the breadth-first search (BFS) algorithm in the breadthFirstSearch function in search.py. Using a Queue I wrote  a graph search algorithm that avoids expanding any already visited states.
+Then I  implemented the **breadth-first search (BFS)** algorithm in the breadthFirstSearch function in search.py. Using a Queue I wrote  a graph search algorithm that avoids expanding any already visited states.
+
 python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs -z .5
+
 ![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/bfs.png)
 
 
@@ -29,21 +31,23 @@ Search nodes expanded: 269
 Thus, BFD gives us a better solution, but it expands more nodes.
 
 
-3. I Implemented the uniform-cost graph search algorithm using priority queue in the uniformCostSearch function in search.py. Now my Pac-Man choses the actions with the smallest cost. 
+I Implemented the **uniform-cost search** algorithm using priority queue in the uniformCostSearch function in search.py. Now my Pac-Man choses the actions with the smallest cost. 
 
 python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs -z .5
 
 For the SearchAgent the result is the same as for BFS since the cost here is the number of steps taken.
 
-4. I implemented  aStarSearch in search.py. A heuristic function (manhattanHeuristic in searchAgents.py) was provided. In this case, Pac-Man pays attention not just on the cost of the taken steps, but also on the remaining distance to the goal. It does not make big difference in the medium and big mazes since the Pac-Man has very few options to chose at every given points, but in the open maze, Pac-Man expands three times less nodes using AStarSearch
+I implemented  **aStarSearch** in search.py. A heuristic function (manhattanHeuristic in searchAgents.py) was provided. In this case, Pac-Man pays attention not just on the cost of the taken steps, but also on the remaining distance to the goal. It does not make big difference in the medium and big mazes since the Pac-Man has very few options to chose at every given points, but in the open maze, Pac-Man expands three times less nodes using AStarSearch
 
 python pacman.py -l openMaze -p SearchAgent -a fn=ucs -z .5
+
 Path found with total cost of 54 in 0.2 seconds
 Search nodes expanded: 682
 
 ![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/dfs.png)
 
 python pacman.py -l openMaze -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic  -z .5
+
 Path found with total cost of 54 in 0.1 seconds
 Search nodes expanded: 211
 
@@ -52,20 +56,11 @@ Search nodes expanded: 211
 
 
 
+**pacman.py** The main file that runs Pac-Man games. This file describes a Pac-Man GameState type.
 
+**game.py** The logic behind how the Pac-Man world works. This file describes several supporting types like AgentState, Agent, Direction, and Grid.
 
-
-
-
-
-
-
-
-pacman.py The main file that runs Pac-Man games. This file describes a Pac-Man GameState type.
-
-game.py The logic behind how the Pac-Man world works. This file describes several supporting types like AgentState, Agent, Direction, and Grid.
-
-util.py Useful data structures for implementing search algorithms.
+**util.py** Useful data structures for implementing search algorithms.
 
 
 graphicsDisplay.py	Graphics for Pac-Man
