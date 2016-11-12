@@ -49,6 +49,7 @@ Path found with total cost of 54 in 0.1 seconds
 Search nodes expanded: **211**
 
 **uniform-cost search:**
+
 python pacman.py -l openMaze -p SearchAgent -a fn=ucs -z .5
 
 
@@ -59,7 +60,7 @@ Path found with total cost of 54 in 0.2 seconds
 Search nodes expanded: **682**
 
 
-
+**Project Spec**
 
 **pacman.py** The main file that runs Pac-Man games. This file describes a Pac-Man GameState type.
 
