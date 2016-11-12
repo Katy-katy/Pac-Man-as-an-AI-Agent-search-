@@ -31,27 +31,32 @@ Search nodes expanded: 269
 Thus, BFD gives us a better solution, but it expands more nodes.
 
 
-I Implemented the **uniform-cost search** algorithm using priority queue in the uniformCostSearch function in search.py. Now my Pac-Man choses the actions with the smallest cost. 
+I also implemented the **uniform-cost search** algorithm using priority queue in the uniformCostSearch function in search.py. Now my Pac-Man choses the actions with the smallest cost. 
 
 python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs -z .5
 
 For the SearchAgent the result is the same as for BFS since the cost here is the number of steps taken.
 
-I implemented  **aStarSearch** in search.py. A heuristic function (manhattanHeuristic in searchAgents.py) was provided. In this case, Pac-Man pays attention not just on the cost of the taken steps, but also on the remaining distance to the goal. It does not make big difference in the medium and big mazes since the Pac-Man has very few options to chose at every given points, but in the open maze, Pac-Man expands three times less nodes using AStarSearch
+The best result I got after implementetion of   **aStarSearch** in search.py. A heuristic function (manhattanHeuristic in searchAgents.py) was provided. In this case, Pac-Man pays attention not just on the cost of the taken steps, but also on the remaining distance to the goal. It does not make big difference in the medium and big mazes since the Pac-Man has very few options to chose at every given points, but in the open maze, Pac-Man expands three times less nodes using AStarSearch
 
-python pacman.py -l openMaze -p SearchAgent -a fn=ucs -z .5
-
-Path found with total cost of 54 in 0.2 seconds
-Search nodes expanded: 682
-
-![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/dfs.png)
+**aStarSearch:**
 
 python pacman.py -l openMaze -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic  -z .5
 
-Path found with total cost of 54 in 0.1 seconds
-Search nodes expanded: 211
-
 ![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/openMaze_Asearch.png)
+
+Path found with total cost of 54 in 0.1 seconds
+Search nodes expanded: **211**
+
+**uniform-cost search:**
+python pacman.py -l openMaze -p SearchAgent -a fn=ucs -z .5
+
+
+
+![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/openMaze_ucs.png)
+
+Path found with total cost of 54 in 0.2 seconds
+Search nodes expanded: **682**
 
 
 
@@ -62,10 +67,14 @@ Search nodes expanded: 211
 
 **util.py** Useful data structures for implementing search algorithms.
 
+**graphicsDisplay.py**	Graphics for Pac-Man
 
-graphicsDisplay.py	Graphics for Pac-Man
-graphicsUtils.py	Support for Pac-Man graphics
-textDisplay.py	ASCII graphics for Pac-Man
-ghostAgents.py	Agents to control ghosts
-keyboardAgents.py	Keyboard interfaces to control Pac-Man
-layout.py	Code for reading layout files and storing their contents
+**graphicsUtils.py**	Support for Pac-Man graphics
+
+**textDisplay.py**	ASCII graphics for Pac-Man
+
+**ghostAgents.py**	Agents to control ghosts
+
+**keyboardAgents.py**	Keyboard interfaces to control Pac-Man
+
+**layout.py**	Code for reading layout files and storing their contents
