@@ -20,8 +20,8 @@ Search nodes expanded: 146
 
 2.Then I  implemented the breadth-first search (BFS) algorithm in the breadthFirstSearch function in search.py. Using a Queue I wrote  a graph search algorithm that avoids expanding any already visited states.
 python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs -z .5
+![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/bfs.png)
 
-picture
 
 Path found with total cost of 68 actions
 Search nodes expanded: 269
@@ -41,14 +41,13 @@ python pacman.py -l openMaze -p SearchAgent -a fn=ucs -z .5
 Path found with total cost of 54 in 0.2 seconds
 Search nodes expanded: 682
 
-picture
+![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/dfs.png)
 
 python pacman.py -l openMaze -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic  -z .5
 Path found with total cost of 54 in 0.1 seconds
 Search nodes expanded: 211
 
-
-picture
+![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/dfs.png)
 
 
 
