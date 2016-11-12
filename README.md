@@ -12,7 +12,7 @@ I implemented the depth-first search (DFS) algorithm in the depthFirstSearch fun
 
 python pacman.py -l mediumMaze -z .5 -p SearchAgent -z .5
 
-(picture)
+![Mockup for feature A](https://github.com/Katy-katy/PYTHON-Pac-Man-as-an-AI-Agent/blob/master/Screen_shot.png)
 
 The Pac-Man board will show an overlay of the states explored, and the order in which they were explored (brighter red means earlier exploration). 
 Path found with total cost of 130 actions
