@@ -47,7 +47,7 @@ python pacman.py -l openMaze -p SearchAgent -a fn=astar,heuristic=manhattanHeuri
 Path found with total cost of 54 in 0.1 seconds
 Search nodes expanded: 211
 
-![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/dfs.png)
+![Mockup for feature A](https://github.com/Katy-katy/Pac-Man-as-an-AI-Agent-search-/blob/master/openMaze_Asearch.png)
 
 
 
